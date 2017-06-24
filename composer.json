@@ -2,6 +2,7 @@
     "name": "jaghoub/izitools",
     "description": "professional notifications and modals from izimodal + izitosat for Laravel",
     "license": "MIT",
+    "keywords": ["laravel","notifications","modals","tosat"],
     "authors": [
         {
             "name": "Jehad jaghoub",
