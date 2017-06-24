@@ -1,6 +1,6 @@
 <?php
 
-namespace Jaghoub\izitools;
+namespace jaghoub\izitools;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -14,7 +14,7 @@ class izitoolsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('izitools', function ($app) {
-            return $this->app->make('Jaghoub\izitools\iziier');
+            return $this->app->make('jaghoub\izitools\iziier');
         });
     }
 }

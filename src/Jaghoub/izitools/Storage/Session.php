@@ -1,6 +1,6 @@
 <?php
 
-namespace Jaghoub\izitools\Storage;
+namespace jaghoub\izitools\Storage;
 
 use Illuminate\Session\Store;
 

@@ -1,10 +1,10 @@
 {
-    "name": "Jaghoub/izitools",
+    "name": "jaghoub/izitools",
     "description": "professional notifications and modals from izimodal + izitosat for Laravel",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jehad Jaghoub",
+            "name": "Jehad jaghoub",
             "email": "jehad.jaghoub2@gmail.com"
         }
     ],
@@ -14,10 +14,10 @@
     },
     "autoload": {
         "psr-0": {
-            "Jaghoub\\izitools\\": "src/"
+            "jaghoub\\izitools\\": "src/"
         },
         "files": [
-            "src/Jaghoub/izitools/functions.php"
+            "src/jaghoub/izitools/functions.php"
         ]
     },
     "minimum-stability": "stable"

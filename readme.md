@@ -3,19 +3,19 @@
 Using Composer
 
 ```
-composer require Jaghoub/izitools
+composer require jaghoub/izitools
 ```
 
 Add the service provider to `config/app.php`
 
 ```php
-Jaghoub\izitools\izitoolsServiceProvider::class,
+jaghoub\izitools\izitoolsServiceProvider::class,
 ```
 
 Optionally include the Facade in `config/app.php` if you'd like.
 
 ```php
-'izitools' => Jaghoub\izitools\Facades\izitools::class,
+'izitools' => jaghoub\izitools\Facades\izitools::class,
 ```
 
 

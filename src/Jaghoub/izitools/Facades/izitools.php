@@ -1,6 +1,6 @@
 <?php
 
-namespace Jaghoub\izitools\Facades;
+namespace jaghoub\izitools\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

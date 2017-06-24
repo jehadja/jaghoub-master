@@ -1,15 +1,15 @@
 <?php
 
-namespace Jaghoub\izitools;
+namespace jaghoub\izitools;
 
-use Jaghoub\izitools\Storage\Session;
+use jaghoub\izitools\Storage\Session;
 
 class iziier
 {
     /**
      * Session storage.
      *
-     * @var Jaghoub\Storage\Session
+     * @var jaghoub\Storage\Session
      */
     protected $session;
 
