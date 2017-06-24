@@ -14,10 +14,11 @@
     },
     "autoload": {
         "psr-0": {
-            "jaghoub\\izitools\\": "src"
+            "jaghoub\\izitools\\": "src/"
         },
         "files": [
             "src/jaghoub/izitools/functions.php"
         ]
-    } 
+    },
+    "prefer-stable": true
 }
