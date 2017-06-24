@@ -16,6 +16,8 @@ class iziier
     public function __construct(Session $session)
     {
         $this->session = $session;
+
+
     }
 
     /**
@@ -29,9 +31,9 @@ class iziier
      */
     public function izime($type = null, array $options = [])
     {
-        $this->session->flash([
-             'izitools.type' => $type,
-            'izitools.options' => json_encode($options),
+        $this->session->izime([
+             'izime.type' => $type,
+            'izime.options' => json_encode($options),
         ]);
     }
 
@@ -50,7 +52,7 @@ class iziier
     }
 
     /**
-     * If a message is ready to be shown.
+     * If a Session is ready to be shown.
      *
      * @return bool
      */
@@ -76,9 +78,35 @@ class iziier
      * @param  boolean $array
      * @return mixed
      */
-    public function options($array = false)
+    public function options($array = true)
     {
-        return json_decode($this->session->get('izime.options'), $array);
+
+        $data =  json_decode($this->session->get('izime.options'), $array);
+        $numItems = count($data);
+        $i = 0;
+        $qut="'";
+        $fcode="";
+        foreach ($data as $key => $value) {
+
+        if(++$i === $numItems) {
+ if(gettype(  $value  == "string" ))
+          $fcode.= $key. ":". $qut . $value. $qut ;
+          else
+          $fcode.= $key. ":".   $value  ;
+
+ }else {
+
+   if(gettype(  $value  == "string" ))
+   $fcode.= $key. ":" . $qut . $value . $qut  . ",";
+   else
+   $fcode.= $key. ":"   . $value . ",";
+
+ }
+
+        }
+
+        return $fcode ;
+
     }
 
      /**

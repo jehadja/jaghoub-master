@@ -16,6 +16,7 @@ class Session
     public function __construct(Store $session)
     {
         $this->session = $session;
+
     }
 
     /**
@@ -44,7 +45,7 @@ class Session
     public function izimeMany(array $data)
     {
         foreach ($data as $key => $value) {
-            $this->flash($key, $value);
+            $this->izime($key, $value);
         }
     }
 
