@@ -92,7 +92,6 @@ $("#modal").iziModal({
      message: 'this packages include only modal and tosat type please select one of them while sending data',
      color:'red'
  });
-
  @endif
 
      });
