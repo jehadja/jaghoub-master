@@ -3,7 +3,7 @@
 Using Composer
 
 ```
-composer require jaghoub/izitools:dev-master
+composer require jaghoub/izitools
 ```
 
 Add the service provider to `config/app.php`
