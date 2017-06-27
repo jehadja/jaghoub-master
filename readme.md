@@ -23,7 +23,48 @@ Optionally include the Facade in `config/app.php` if you'd like.
 
 ### Basic
 
+
 From your application, call the `izime` method with a options and type.
+
+include styles
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.1.1/css/iziToast.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.4.2/css/iziModal.css" />
+```
+
+
+include javascript
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.1.1/js/iziToast.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.4.2/js/iziModal.min.js"></script>
+```
+
+
+if use Facade
+
+```php
+izitools()->izime('tosat', [
+ 'title'=> 'Welcome to laravel Website Test !',
+ 'message'=>'is simply dummy text of the printing and typesetting industry. ',
+ 'color'=>'green',
+ 'position'=>'center'
+]);
+---
+or
+---
+
+izitools()->izime('modal', [
+ 'title'=> 'Welcome to laravel Website Test !',
+ 'iframe'=>true,
+ 'iframeHeight'=>800,
+ 'iframeURL'=>'http://izimodal.dolce.ninja'
+]);
+
+```
+
+without Facade
 
 ```php
 izitools::izime('tosat', [
@@ -67,7 +108,7 @@ izitools::izime('modal', [
 ]);
 ```
 
-Then, in your view.
+Then, in your view without Facade.
 
 ```javascript
 @if (izitools::ready())
@@ -92,11 +133,44 @@ $("#modal").iziModal({
      message: 'this packages include only modal and tosat type please select one of them while sending data',
      color:'red'
  });
+
  @endif
 
      });
       </script>
 @endif
+```
+
+with using Facade
+
+```javascript
+@if (izitools()->ready())
+     <script>
+     $(document).ready(function(){
+
+ @if (izitools()->type() =='tosat')
+ iziToast.show({
+{!! izitools::options() !!}
+  });
+
+ @elseif(izitools()->type() =='modal')
+$("#modal").iziModal({
+ {!! izitools()->options() !!}
+});
+
+   $('#modal').iziModal('open');
+ @else
+
+ iziToast.show({
+     title: 'this option not Available',
+     message: 'this packages include only modal and tosat type please select one of them while sending data',
+     color:'red'
+ });
+
+ @endif
+
+     });
+      </script>
 @endif
 ```
 
